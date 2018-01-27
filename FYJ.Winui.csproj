@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E5AF5378-356D-4493-8BAF-DEF42188BB9C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FYJ.Winui</RootNamespace>
+    <AssemblyName>FYJ.Winui</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ButtonUserControl.xaml.cs">
+      <DependentUpon>ButtonUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ColorPickerWindow.xaml.cs">
+      <DependentUpon>ColorPickerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BaseWindow.cs" />
+    <Compile Include="Controls\ImageButton.xaml.cs">
+      <DependentUpon>ImageButton.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Themes\Default\BaseWindowDesign2.xaml.cs">
+      <DependentUpon>BaseWindowDesign2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Themes\Default\BaseWindowDesign.xaml.cs">
+      <DependentUpon>BaseWindowDesign.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIHelper.cs" />
+    <Compile Include="Util\DrawingHelper.cs" />
+    <Compile Include="Util\HSLColor.cs" />
+    <Compile Include="Util\RelayCommand.cs" />
+    <Compile Include="Util\Win32.cs" />
+    <Page Include="ButtonUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ColorPickerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ImageButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Themes\Default\BaseWindowDesign2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Default\BaseWindowDesign.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Default\BaseWindowStyle2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Default\ColorPickerWindowStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Default\BaseWindowStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\add.png" />
+    <Resource Include="Resources\allbtn_down.png" />
+    <Resource Include="Resources\allbtn_highlight.png" />
+    <Resource Include="Resources\base_form_bg.png" />
+    <Resource Include="Resources\btn_bg.png" />
+    <Resource Include="Resources\btn_close_down.png" />
+    <Resource Include="Resources\btn_close_highlight.png" />
+    <Resource Include="Resources\btn_close_normal.png" />
+    <Resource Include="Resources\btn_disabled.png" />
+    <Resource Include="Resources\btn_down.png" />
+    <Resource Include="Resources\btn_focus.png" />
+    <Resource Include="Resources\btn_highlight.png" />
+    <Resource Include="Resources\btn_max_down.png" />
+    <Resource Include="Resources\btn_max_highlight.png" />
+    <Resource Include="Resources\btn_max_normal.png" />
+    <Resource Include="Resources\btn_menu_down.png" />
+    <Resource Include="Resources\btn_menu_down.png.png" />
+    <Resource Include="Resources\btn_menu_highlight.png" />
+    <Resource Include="Resources\btn_menu_normal.png" />
+    <Resource Include="Resources\btn_mini_down.png" />
+    <Resource Include="Resources\btn_mini_highlight.png" />
+    <Resource Include="Resources\btn_mini_normal.png" />
+    <Resource Include="Resources\btn_normal.png" />
+    <Resource Include="Resources\btn_restore_down.png" />
+    <Resource Include="Resources\btn_restore_highlight.png" />
+    <Resource Include="Resources\btn_restore_normal.png" />
+    <Resource Include="Resources\btn_skin_down.png" />
+    <Resource Include="Resources\btn_skin_highlight.png" />
+    <Resource Include="Resources\btn_skin_normal.png" />
+    <Resource Include="Resources\cha.png" />
+    <Resource Include="Resources\find.png" />
+    <Resource Include="Resources\frameBorderEffect_mouseDownDraw.png" />
+    <Resource Include="Resources\frameBorderEffect_normalDraw.png" />
+    <Resource Include="Resources\keyboard.png" />
+    <Resource Include="Resources\MainBkg.png" />
+    <Resource Include="Resources\mainform_background.png" />
+    <Resource Include="Resources\main_form_bg.png" />
+    <Resource Include="Resources\message.png" />
+    <Resource Include="Resources\netsetting.png" />
+    <Resource Include="Resources\newid.png" />
+    <Resource Include="Resources\Padding4Hot.png" />
+    <Resource Include="Resources\Padding4Normal.png" />
+    <Resource Include="Resources\Padding4Press.png" />
+    <Resource Include="Resources\Padding4Select.png" />
+    <Resource Include="Resources\shading_highlight.png" />
+    <Resource Include="Resources\sysmessagebox_errorFile.png" />
+    <Resource Include="Resources\sysmessagebox_inforFile.png" />
+    <Resource Include="Resources\sysmessagebox_questionFile.png" />
+    <Resource Include="Resources\sysmessagebox_warningFile.png" />
+    <Resource Include="Resources\TabIcons.bmp" />
+    <Resource Include="Resources\TbAdjustColorNormal.png" />
+    <Resource Include="Resources\TbAdjustColorPushed.png" />
+    <Resource Include="Resources\TbShadingNormal.png" />
+    <Resource Include="Resources\TbShadingPushed.png" />
+    <Resource Include="Resources\xiaoyuanquan.png" />
+    <Resource Include="Resources\x_enter.png" />
+    <Resource Include="Resources\x_normal.png" />
+    <Resource Include="Resources\右下角_bg.png" />
+    <Resource Include="Resources\透明度.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pig.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\32x32\Add.png" />
+    <Resource Include="Resources\32x32\Alert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\skin\skin1_big.jpg" />
+    <Resource Include="Resources\skin\skin1_small.jpg" />
+    <Resource Include="Resources\skin\skin2_big.jpg" />
+    <Resource Include="Resources\skin\skin2_small.jpg" />
+    <Resource Include="Resources\skin\skin3_big.jpg" />
+    <Resource Include="Resources\skin\skin3_small.jpg" />
+    <Resource Include="Resources\skin\skin4_big.jpg" />
+    <Resource Include="Resources\skin\skin4_small.jpg" />
+    <Resource Include="Resources\skin\skin6_big.jpg" />
+    <Resource Include="Resources\skin\skin6_small.jpg" />
+    <Resource Include="Resources\skin\skin5_big.jpg" />
+    <Resource Include="Resources\skin\skin5_small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\skinNone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\toolbar_hover.png" />
+    <Resource Include="Resources\toolbar_pushed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\pager\pagination_first.gif" />
+    <Resource Include="Resources\pager\pagination_first_gray.gif" />
+    <Resource Include="Resources\pager\pagination_last.gif" />
+    <Resource Include="Resources\pager\pagination_last_gray.gif" />
+    <Resource Include="Resources\pager\pagination_load.png" />
+    <Resource Include="Resources\pager\pagination_loading.gif" />
+    <Resource Include="Resources\pager\pagination_next.gif" />
+    <Resource Include="Resources\pager\pagination_next_gray.gif" />
+    <Resource Include="Resources\pager\pagination_prev.gif" />
+    <Resource Include="Resources\pager\pagination_prev_gray.gif" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

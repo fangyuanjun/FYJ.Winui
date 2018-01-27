@@ -1,0 +1,100 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:local="clr-namespace:FYJ.Winui">
+
+    <ControlTemplate x:Key="BaseWindowControlTemplate2" TargetType="{x:Type Window}">
+
+        <Border x:Name="borderTitle" CornerRadius="5,5,5,5"  BorderThickness="0,0,0,0">
+            <Border.Background>
+                <VisualBrush Stretch="Uniform">
+                    <VisualBrush.Visual>
+                        <Grid x:Name="gridTitle"  Height="{TemplateBinding  Height}" Width="{TemplateBinding Width}" Background="#FF15A0FD">
+                            <Grid.RowDefinitions>
+                                <RowDefinition  Height="155"></RowDefinition>
+                                <RowDefinition  Height="*"></RowDefinition>
+                                <RowDefinition  Height="33"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="5"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Canvas Grid.Row="0" Grid.Column="0">
+                                <Canvas.Background>
+                                    <ImageBrush TileMode="Tile" ImageSource="/FYJ.Winui;component/Resources/main_form_bg.png"   Viewbox="0,0,5,155" ViewboxUnits="Absolute"></ImageBrush>
+                                </Canvas.Background>
+                            </Canvas>
+                            <Canvas Grid.Row="0" Grid.Column="1">
+                                <Canvas.Background>
+                                    <ImageBrush TileMode="Tile" ImageSource="/FYJ.Winui;component/Resources/main_form_bg.png"   Viewbox="5,0,10,155" Viewport="0 0 10 155" ViewportUnits="Absolute"  ViewboxUnits="Absolute"></ImageBrush>
+                                </Canvas.Background>
+                            </Canvas>
+                            <Canvas Grid.Row="0" Grid.Column="2">
+                                <Canvas.Background>
+                                    <ImageBrush TileMode="Tile" ImageSource="/FYJ.Winui;component/Resources/main_form_bg.png"  Viewbox="15,0,5,155" ViewboxUnits="Absolute"></ImageBrush>
+                                </Canvas.Background>
+                            </Canvas>
+
+                            <Canvas Grid.Row="1" Grid.Column="0">
+                                <Canvas.Background>
+                                    <ImageBrush TileMode="Tile" ImageSource="/FYJ.Winui;component/Resources/main_form_bg.png" Viewbox="0,155,5,90" ViewboxUnits="Absolute" Viewport="0 0 1 1" ViewportUnits="RelativeToBoundingBox"  ></ImageBrush>
+                                </Canvas.Background>
+                            </Canvas>
+                            <Canvas Grid.Row="1" Grid.Column="1">
+                                <Canvas.Background>
+                                    <ImageBrush TileMode="Tile" ImageSource="/FYJ.Winui;component/Resources/main_form_bg.png"  Viewport="0 0 1 1" ViewportUnits="RelativeToBoundingBox" Viewbox="5,155,10,90" ViewboxUnits="Absolute"></ImageBrush>
+                                </Canvas.Background>
+                            </Canvas>
+                            <Canvas Grid.Row="1" Grid.Column="2">
+                                <Canvas.Background>
+                                    <ImageBrush TileMode="Tile" ImageSource="/FYJ.Winui;component/Resources/main_form_bg.png"  Viewport="0 0 1 1" ViewportUnits="RelativeToBoundingBox" Viewbox="15,155,5,90" ViewboxUnits="Absolute"></ImageBrush>
+                                </Canvas.Background>
+                            </Canvas>
+
+                            <Canvas Grid.Row="2" Grid.Column="0">
+                                <Canvas.Background>
+                                    <ImageBrush TileMode="Tile" ImageSource="/FYJ.Winui;component/Resources/main_form_bg.png"   Viewbox="0,386,5,34" ViewboxUnits="Absolute"></ImageBrush>
+                                </Canvas.Background>
+                            </Canvas>
+                            <Canvas Grid.Row="2" Grid.Column="1">
+                                <Canvas.Background>
+                                    <ImageBrush TileMode="Tile" ImageSource="/FYJ.Winui;component/Resources/main_form_bg.png"  Viewport="0 0 1 1" ViewportUnits="RelativeToBoundingBox" Viewbox="5,386,10,34" ViewboxUnits="Absolute"></ImageBrush>
+                                </Canvas.Background>
+                            </Canvas>
+                            <Canvas Grid.Row="2" Grid.Column="2">
+                                <Canvas.Background>
+                                    <ImageBrush TileMode="Tile" ImageSource="/FYJ.Winui;component/Resources/main_form_bg.png"   Viewbox="15,386,5,34" ViewboxUnits="Absolute"></ImageBrush>
+                                </Canvas.Background>
+                            </Canvas>
+
+                        </Grid>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <DockPanel LastChildFill="True">
+                <DockPanel DockPanel.Dock="Top"     LastChildFill="False" VerticalAlignment="Top" >
+                    <Image Width="16" Height="16" VerticalAlignment="Top" Margin="5,5,0,5"   DockPanel.Dock="Left"  Source="{TemplateBinding Icon}" ></Image>
+                    <TextBlock Text="{TemplateBinding Property=Title}"   DockPanel.Dock="Left" FontWeight="Bold" Margin="5,5,0,0" ></TextBlock>
+                    <local:ButtonUserControl x:Name="btnClose" DockPanel.Dock="Right"  Height="18" VerticalAlignment="Top"   Width="38" ImgSource="/FYJ.Winui;component/Resources/btn_close_normal.png" MouseEnterImgSource="/FYJ.Winui;component/Resources/btn_close_highlight.png" ToolTip="关闭"></local:ButtonUserControl>
+                    <local:ButtonUserControl x:Name="btnMax" DockPanel.Dock="Right"  Height="18" VerticalAlignment="Top"   Width="25"  ImgSource="/FYJ.Winui;component/Resources/btn_max_normal.png" MouseEnterImgSource="/FYJ.Winui;component/Resources/btn_max_highlight.png"></local:ButtonUserControl>
+                    <local:ButtonUserControl x:Name="btnMin" DockPanel.Dock="Right"  Height="18" VerticalAlignment="Top"   Width="25" ImgSource="/FYJ.Winui;component/Resources/btn_mini_normal.png" MouseEnterImgSource="/FYJ.Winui;component/Resources/btn_mini_highlight.png" ToolTip="最小化"></local:ButtonUserControl>
+                    <local:ButtonUserControl x:Name="btnMenu" DockPanel.Dock="Right"  Height="18" VerticalAlignment="Top"   Width="25"  ImgSource="/FYJ.Winui;component/Resources/btn_menu_normal.png" MouseEnterImgSource="/FYJ.Winui;component/Resources/btn_menu_highlight.png"></local:ButtonUserControl>
+                    <local:ButtonUserControl x:Name="btnSkin" DockPanel.Dock="Right"  Height="18" VerticalAlignment="Top"   Width="25"  ImgSource="/FYJ.Winui;component/Resources/btn_skin_normal.png" MouseEnterImgSource="/FYJ.Winui;component/Resources/btn_skin_highlight.png"></local:ButtonUserControl>
+                </DockPanel>
+
+                <DockPanel Height="2"  DockPanel.Dock="Bottom"></DockPanel>
+                
+                <AdornerDecorator >
+                    <ContentPresenter />
+                </AdornerDecorator>
+            </DockPanel>
+        </Border>
+    </ControlTemplate>
+
+    <Style x:Key="BaseWindowStyle2"   TargetType="{x:Type Window}">
+        <Setter Property="Template" Value="{StaticResource BaseWindowControlTemplate2}"></Setter>
+        <Setter Property="AllowsTransparency" Value="True"></Setter>
+        <Setter Property="WindowStyle" Value="None"></Setter>
+    </Style>
+
+</ResourceDictionary>

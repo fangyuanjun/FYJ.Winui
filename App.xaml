@@ -1,0 +1,16 @@
+﻿<Application x:Class="FYJ.Winui.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml"
+             >
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/Default/BaseWindowStyle.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Themes/Default/BaseWindowStyle2.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Themes/Default/ColorPickerWindowStyle.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>
